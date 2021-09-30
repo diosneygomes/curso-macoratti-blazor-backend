@@ -16,7 +16,7 @@ namespace Catalogo_Blazor.Server
         private readonly IConfiguration configuration;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
