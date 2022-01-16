@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220116174028_AjusteImagemUrl.cs" />
+    <Compile Remove="Migrations\20220116174028_AjusteImagemUrl.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="3.2.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.19" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.19">

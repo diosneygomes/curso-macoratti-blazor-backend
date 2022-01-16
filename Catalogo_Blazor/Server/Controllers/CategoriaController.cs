@@ -21,6 +21,13 @@ namespace Catalogo_Blazor.Server.Controllers
             this.context = context;
         }
 
+        [HttpGet("todas")]
+        public async Task<ActionResult<List<Categoria>>> Get()
+        {
+            return await context.Categorias.AsNoTracking().ToListAsync();
+        }
+
+
         [HttpGet]
         public async Task<ActionResult<List<Categoria>>> Get([FromQuery] Paginacao paginacao, [FromQuery] string nome)
         {
@@ -38,8 +45,8 @@ namespace Catalogo_Blazor.Server.Controllers
                 .ToListAsync();
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Categoria>> GetCategoria(int id)
+        [HttpGet("{id}", Name = "GetCategoria")]
+        public async Task<ActionResult<Categoria>> Get(int id)
         {
             return await context.Categorias.FirstOrDefaultAsync(x => x.CategoriaId == id);
         }
