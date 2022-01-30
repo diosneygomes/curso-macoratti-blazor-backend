@@ -1,4 +1,5 @@
 ﻿using Catalogo_Blazor.Shared.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Catalogo_Blazor.Server.Context
@@ -7,8 +8,8 @@ namespace Catalogo_Blazor.Server.Context
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base (options) { }
 
-        public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
+         public DbSet<Categoria> Categorias { get; set; }
+         public DbSet<Produto> Produtos { get; set; }
     }
     
 }

@@ -7,10 +7,14 @@
   <ItemGroup>
     <Compile Remove="Migrations\20220116174028_AjusteImagemUrl.cs" />
     <Compile Remove="Migrations\20220116174028_AjusteImagemUrl.Designer.cs" />
+    <Compile Remove="Migrations\20220130174900_identitySchema.cs" />
+    <Compile Remove="Migrations\20220130174900_identitySchema.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.22" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.19" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.19">
       <PrivateAssets>all</PrivateAssets>
