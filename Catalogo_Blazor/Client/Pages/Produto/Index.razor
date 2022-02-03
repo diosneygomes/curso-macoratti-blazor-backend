@@ -6,7 +6,7 @@
 @using Microsoft.AspNetCore.Authorization
 @attribute [Authorize]
 
-<AuthorizeView Roles="root">
+<AuthorizeView Roles="Admin">
     <Authorized>
         <div>
             <a class="btn btn-success" href="produto/create">Novo Produto</a>
